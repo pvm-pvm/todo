@@ -76,9 +76,9 @@ form input{
     transition:background-color 200ms ease-in-out;
 }
 
-form input:hover{
-    /* cursor:text; */
-}
+/* form input:hover{
+    cursor:text; *
+} */
 
 form input::placeholder{
     color:white;
