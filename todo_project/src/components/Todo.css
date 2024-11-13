@@ -20,25 +20,26 @@
 
 }
 
-.header,
-.form,
+/* .header,
+.form, */
+/* modified margin here */
 .date-time{
-    /* margin:0 1rem; */
-    /* min-height: 10vh; */
-    /* width:100% */
+    margin:1rem 0rem; 
+    min-height: 10vh;
+    width:100%
 }
 
 
-.header{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: space-around; */
-    /* font-size:3rem; */
-    /* min-height: 25vh; */
-    /* width:100% */
+/* .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size:3rem;
+    min-height: 25vh;
+    width:100%
 
-}
+} */
 
 section h1{
     color:#fff;
