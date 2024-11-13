@@ -181,7 +181,7 @@ li span{
 }
 
 .checkList{
-    text-decoration: line-though;
+    text-decoration: line-through;
 }
 .notCheckedList{
     text-decoration: none;

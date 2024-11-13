@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { setLocalStorageData } from "./ToLocalStorageHandle";
 
 export const TodoForm = ({tasks,setTask})=>{
     const [inputValue,setInputValue] = useState("");
@@ -10,13 +11,19 @@ export const TodoForm = ({tasks,setTask})=>{
 
     function handleFormSubmit(event){
         event.preventDefault();
-        if(tasks.includes(inputValue)){
+        const isTaskExist = tasks.some((task)=>{
+            return task.content === inputValue;
+        })
+        if(isTaskExist){
             setInputValue("");
             return;
         }
-        setTask(prevTasks=> [...prevTasks,inputValue]);
+        setTask(prevTasks=>{
+           return [...prevTasks,{id:inputValue,content:inputValue,checked:false}]
+       });
         setInputValue("");
     }
+    setLocalStorageData(tasks);
     
     return (
         <section>

@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
-
+import { useState } from "react";
 import { TodoHeader } from "./TodoHeader";
 import { TodoForm } from "./TodoForm";
 import { TodoList } from "./TodoList";
-import "./Todo.css";
 import { TodoClear } from "./TodoClear";
+import { getLocalStorageData } from "./ToLocalStorageHandle";
+import "./Todo.css";
 
 export const Todo = () => {
-    const [tasks,setTask] = useState([]);
+
+  const [tasks,setTask] = useState(getLocalStorageData)
 
   return (
     <section className="todo-container">
